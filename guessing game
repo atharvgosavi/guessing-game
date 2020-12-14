@@ -1,0 +1,30 @@
+import random , sys
+try:
+    x = int(random.randint(1, 10))
+    print(f"I am thinking of a number between 1 and 20 and you have {x} tries to guess the number correctly ")
+    p = 0
+    TheNumber = random.randint(1 , 20)
+    for i in range(0, x):
+
+        
+        
+        
+        TheGuess = int(input("Take a guess "))
+        p = p + 1
+        if TheGuess == TheNumber:
+            print(f"Congrats! you guessed the right number in {p} tries")
+            sys.exit()
+        if TheGuess > TheNumber:
+            print("The number is lower than that")
+        if TheGuess < TheNumber:
+            print("The number is higher than that")
+
+        if p == x:
+            print(f"The number was {TheNumber} ")
+
+    
+
+
+except ValueError:
+    print("You didn't enter anything, re-run the program please ")
+  
